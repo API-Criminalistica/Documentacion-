@@ -1,4 +1,4 @@
-# 📋 Estándares de Desarrollo API-Criminalistica
+# Estándares de Desarrollo API-Criminalistica
 
 **Versión:** 1.0  
 **Última actualización:** 2026-05-04  
@@ -6,7 +6,7 @@
 
 ---
 
-## 📑 Tabla de Contenidos
+## Tabla de Contenidos
 
 1. [Introducción](#introducción)
 2. [Estándares de Código](#estándares-de-código)
@@ -19,19 +19,19 @@
 
 ---
 
-## 🎯 Introducción
+## Introducción
 
 Este documento establece los estándares de desarrollo que todo miembro del equipo de **API-Criminalistica** debe seguir. El objetivo es garantizar:
 
-- ✅ **Consistencia** en el código
-- ✅ **Mantenibilidad** a largo plazo
-- ✅ **Escalabilidad** del proyecto
-- ✅ **Calidad** en la entrega
-- ✅ **Colaboración** eficiente entre equipos
+- **Consistencia** en el código
+- **Mantenibilidad** a largo plazo
+- **Escalabilidad** del proyecto
+- **Calidad** en la entrega
+- **Colaboración** eficiente entre equipos
 
 ---
 
-## 💻 Estándares de Código
+## Estándares de Código
 
 ### Convenciones de Nombres
 
@@ -79,7 +79,7 @@ LIST    → GetAllXXX()        (Listar)
 
 ---
 
-## 🏗️ Arquitectura
+## Arquitectura
 
 ### Patrón de Capas
 
@@ -108,11 +108,11 @@ LIST    → GetAllXXX()        (Listar)
 ### Responsabilidades por Capa
 
 #### 1. **Controllers (Entrada/Salida)**
-- ✅ Recibir solicitudes HTTP
-- ✅ Validar parámetros básicos
-- ✅ Llamar a servicios
-- ✅ Devolver respuestas formatadas
-- ❌ NO implementar lógica de negocio
+- Recibir solicitudes HTTP
+- Validar parámetros básicos
+- Llamar a servicios
+- Devolver respuestas formatadas
+- NO implementar lógica de negocio
 
 **Ejemplo:**
 ```csharp
@@ -137,11 +137,11 @@ public class CriminalController : ControllerBase
 ```
 
 #### 2. **Services (Lógica de Negocio)**
-- ✅ Implementar reglas de negocio
-- ✅ Coordinar operaciones
-- ✅ Manejo de transacciones
-- ✅ Validaciones complejas
-- ❌ NO acceder directo a BD
+- Implementar reglas de negocio
+- Coordinar operaciones
+- Manejo de transacciones
+- Validaciones complejas
+- NO acceder directo a BD
 
 **Ejemplo:**
 ```csharp
@@ -165,10 +165,10 @@ public class CriminalService : ICriminalService
 ```
 
 #### 3. **Repositories (Acceso a Datos)**
-- ✅ Operaciones CRUD
-- ✅ Consultas a BD
-- ✅ Mapeo de entidades
-- ❌ NO contener lógica de negocio
+- Operaciones CRUD
+- Consultas a BD
+- Mapeo de entidades
+- NO contener lógica de negocio
 
 **Ejemplo:**
 ```csharp
@@ -192,7 +192,7 @@ public class CriminalRepository : ICriminalRepository
 
 ---
 
-## 🔗 API REST
+## API REST
 
 ### Convención de Endpoints
 
@@ -268,7 +268,7 @@ DELETE  /api/delitos/{id}          → Eliminar delito
 
 ---
 
-## ⚠️ Manejo de Errores
+## Manejo de Errores
 
 ### Formato Estándar de Errores
 
@@ -373,7 +373,7 @@ catch (Exception ex)
 
 ---
 
-## 📌 Control de Versiones
+## Control de Versiones
 
 ### Estructura de Ramas
 
@@ -439,7 +439,7 @@ Fixes #123
 
 ---
 
-## 🧪 Pruebas
+## Pruebas
 
 ### Cobertura Mínima
 
@@ -481,7 +481,7 @@ public void GetCriminal_WithValidId_ReturnsOk()
 
 ---
 
-## 📚 Documentación
+##  Documentación
 
 ### XML Comments (C#)
 
@@ -502,18 +502,16 @@ public async Task<CriminalDTO> GetCriminalByIdAsync(int id)
 
 Todo repositorio debe incluir:
 
-- ✅ Descripción del proyecto
-- ✅ Requisitos previos
-- ✅ Instalación
-- ✅ Configuración
-- ✅ Uso/Ejemplos
-- ✅ Estructura del proyecto
-- ✅ Contribuir
-- ✅ Licencia
+- Descripción del proyecto
+- Requisitos previos
+- Instalación
+- Configuración
+- Uso/Ejemplos
+- Estructura del proyecto
 
 ---
 
-## 🚀 Checklist de Calidad
+## Checklist de Calidad
 
 Antes de hacer commit/push:
 
@@ -530,15 +528,5 @@ Antes de hacer commit/push:
 
 ---
 
-## 📞 Contacto y Preguntas
-
-Si tienes dudas sobre estos estándares:
-1. Revisa este documento nuevamente
-2. Consulta con líderes técnicos
-3. Abre una issue en el repositorio correspondiente
-4. Participa en reuniones de equipo
-
----
-
 **Última revisión:** 2026-05-04  
-**Próxima revisión:** 2026-08-04
+**Próxima revisión:** 2026-09-04
